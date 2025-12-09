@@ -1,13 +1,21 @@
-function add(){
-    //Escribir tu código que aumenta
+function add() {
+    const counterElement = document.getElementById("number");
+    let currentValue = parseInt(counterElement.innerHTML, 10);
+    currentValue += 1;
+    counterElement.innerHTML = currentValue;
 }
 
-function reset(){
-    //Escribir tu código que hace un reset a 0
+function reset() {
+    document.getElementById("number").innerHTML = "0";
 }
 
-function decrease(){
-    //Escribir tu código que resta
+function decrease() {
+    const counterElement = document.getElementById("number");
+    let currentValue = parseInt(counterElement.innerHTML, 10);
+    if (currentValue > 0) {
+        currentValue -= 1;
+    }
+    counterElement.innerHTML = currentValue;
 };
 
-export {add, reset, decrease}
+export { add, reset, decrease }
