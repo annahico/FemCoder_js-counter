@@ -12,10 +12,8 @@ function reset() {
 function decrease() {
     const counterElement = document.getElementById("number");
     let currentValue = parseInt(counterElement.innerHTML, 10);
-    if (currentValue > 0) {
-        currentValue -= 1;
-    }
-    counterElement.innerHTML = currentValue;
+    const newValue = Math.max(0, currentValue - 1);
+    counterElement.innerHTML = newValue;
 };
 
 export { add, reset, decrease }
